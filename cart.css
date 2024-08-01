@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.cart {
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+.container {
+    width: 1200px;
+    height: auto;
+    background-color: rgb(172, 185, 195);
+    margin: 0 auto;
+
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.item img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.item button,
+.myBtnColor {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(31, 49, 122);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: large;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all .8s ease-in-out;
+}
+
+.item button:focus {
+    border: none;
+    outline: none;
+}
+
+.myBtnColor:focus {
+    border: none;
+    outline: none;
+}
+
+.item button:hover {
+    transition: all 0.323s ease-in-out;
+    background-color: #b900d1;
+    color: aliceblue;
+}
+
+.myBtnColor:hover {
+    transition: all 0.323s ease-in-out;
+    background-color: #b900d1;
+    color: aliceblue;
+}
+
+.myBtnColor {
+    margin-left: 10px;
+}
+
+.active {
+    background-color: #b900d1;
+}
+
+#new,
+#discount,
+#xipo,
+#Sh,
+#Exciter,
+#yaz,
+#sirius,
+#Si-Fi,
+#hondaware {
+    display: none;
+}
+
+.animation {
+    animation: changecolor .6s ease-in-out infinite;
+}
+
+@keyframes changecolor {
+    0% {
+        color: #b900d1;
+    }
+
+    40% {
+        color: rgb(36, 69, 130);
+    }
+
+    68% {
+        opacity: 0.2;
+    }
+
+    100% {
+        color: rgb(174, 25, 50);
+    }
+}
+
+div.honda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div.honda div.rotate {
+    width: 80px;
+    height: 80px;
+    border-top: 4px solid greenyellow;
+    border-right: 4px solid greenyellow;
+    border-left: 4px solid greenyellow;
+    border-bottom: 4px solid transparent;
+    transition: all .6s ease-in-out;
+    border-radius: 50%;
+    background-color: transparent;
+    animation: around 1.6s ease-in-out infinite;
+
+    margin-bottom: 220px;
+
+}
+
+@keyframes around {
+    0% {
+        transform: rotate(11deg);
+    }
+
+    45% {
+        transform: rotate(114deg);
+    }
+
+    67% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(211deg);
+    }
+}
+
+
+
+/* /////////////////// */
+.nowbike {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#motobikename {
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#Si-Fi,
+#hondaware {
+    height: 440px;
+}
+
+/* ADD TO CART */
+.infoOfcart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* .infoOfcart .img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+} */
+
+.cleanLine {
+    border-bottom: 4px solid rgb(9, 177, 9);
+    background-color: coral;
+}
+
+.cleanLine .img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.cleanLine>.quantity input {
+    width: 80px;
+}
+
+.cleanLine {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.cleanLine div .nameInfo {
+    flex-wrap: wrap;
+}
+
+.cleanLine div.emplement #delete {
+    padding: 8px 16px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cleanLine .price {
+    margin-right: 40px;
+}
+
+.cleanLine .quantity input {
+    margin-right: 30px;
+}
+
+/* .manageOf--cart {
+    margin-left: 200px;
+} */
+
+
+/* buy and total */
+.totaland-buy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.totaland-buy .buy button {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(31, 49, 122);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: large;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all .3s ease-in-out;
+    margin-top: 10px;
+}
+
+.totaland-buy .buy button:hover {
+    background-color: rgb(205, 37, 70);
+    color: antiquewhite;
+}
+
+.totaland-buy div #total-price,
+#total-price_money {
+    font-size: 28px;
+    border: #b900d1;
+}
+
+#quantity {
+    position: absolute;
+    top: -8px;
+    font-size: 22px;
+    color: rgb(198, 5, 5);
+}
+
+
+
+/* ///////////////////cart button */
+.manageOf--cart {
+    width: 600px;
+    height: inherit;
+    background-color: rgb(116, 70, 79);
+    position: relative;
+    top: -1340px;
+    left: -200px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.active-cart {
+    opacity: 1;
+    top: -1290px;
+    left: -60px;
+    pointer-events: auto;
+    transition: all 1.2s ease-in-out;
+
+}
+
+#gridCheck {
+    accent-color: blue;
+}
+
+
+
+.setWidthForms {
+    width: 800px;
+    margin: 20px auto;
+    background-color: rgb(221, 230, 238);
+    opacity: 0;
+    pointer-events: none;
+    position: relative;
+}
+
+.close-setWidthForms {
+    opacity: 0;
+    visibility: visible;
+    transition: all .9s ease-out;
+}
+
+.cc {
+    width: 800px;
+    background-color: rgb(221, 230, 238);
+    opacity: 1;
+    pointer-events: auto;
+    transition: all .8s ease-in-out;
+    z-index: 1;
+    position: relative;
+    top: -1400px;
+}
+
+#bookNow {
+    margin-left: 300px;
+}
+
+.showpop {
+    width: 360px;
+    height: 148px;
+    background-color: #ac6cb5;
+    text-align: center;
+    user-select: none;
+    color: rgb(14, 7, 129);
+    position: relative;
+    top: -1892px;
+    right: -1200px;
+    transition: all .8s ease-in-out;
+    border-radius: 12px;
+    opacity: 1;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.showpop button {
+    /* width: 100px;
+    height: 40px;
+    padding: 20px; */
+    background-color: rgb(219, 193, 24);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: large;
+    cursor: pointer;
+    margin-right: 140px;
+    transition: all .01s ease-in-out;
+}
+
+.showpop>button:active {
+    background-color: cyan;
+}
+
+.moveBooknow1s {
+    opacity: 1;
+    right: -1010px;
+    pointer-events: auto;
+}
+
+.vnvn {
+    opacity: 0;
+}
+
+footer {
+    width: 100%;
+    height: 260px;
+    background-color: #9a9df1;
+    margin-bottom: 202222200px;
+    position: relative;
+    top: -596px;
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body {
+    height: 40vh;
+    background-color: transparent;
+
+}
+
+footer ul li.nack-li>span {
+    animation: changecolor .8s ease-in-out infinite;
+}
+
+@keyframes changecolor {
+    0% {
+        color: aqua;
+    }
+
+    50% {
+        color: chartreuse;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+
+
+.hideForm {
+    opacity: 0;
+    transition: all .4s ease;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+</head>
+<style>
+    /* css */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        box-sizing: border-box;
+        user-select: none;
+    }
+
+    .container {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        border: 1px solid gray;
+        border-radius: 10px;
+        width: 500px;
+        height: 400px;
+    }
+
+    input {
+        margin-top: 30px;
+        width: 300px;
+        height: 40px;
+        padding: 10px;
+        border: 1px solid slategray;
+        border-radius: 4px;
+        outline: none;
+        margin-left: 90px;
+    }
+
+    .form__lable {
+        position: relative;
+    }
+
+    label {
+        position: absolute;
+        top: 60%;
+        left: 100px;
+        pointer-events: none;
+        padding: 0 5px;
+        background-color: #fff;
+        transition: all .4s ease-in-out;
+    }
+
+    .form__lable input:focus~label,
+    .form__lable input:valid~label {
+        top: 20px;
+        color: #3973e3;
+    }
+
+    .form__lable input:focus {
+        border: 2px solid #3973e3;
+        transition: all .1s ease-in-out;
+    }
+
+
+    #btn {
+        cursor: pointer;
+        background-color: #3973e3;
+    }
+
+    #view {
+        position: absolute;
+        right: 120px;
+        top: 50%;
+        background-color: #3973e3;
+        width: 45px;
+        padding: 6px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .opten {
+        width: 300px;
+        height: 40px;
+        background-color: rgb(195, 0, 255);
+    }
+
+    .nohaveacc {
+        text-align: center;
+        margin-top: 14px;
+    }
+
+    .nohaveacc a {
+        text-decoration: none;
+        color: #103e9a;
+    }
+</style>
+
+<body>
+    <!-- html -->
+    <div class="container">
+        <form action="" id="registerForm">
+            <h1>Đăng ký</h1>
+            <div class="form__lable">
+                <input type="text" required>
+                <label for="name">Your email</label>
+            </div>
+            <div class="form__lable">
+                <input type="text" required id="registerUsername">
+                <label for="name">Username</label>
+            </div>
+            <div class="form__lable">
+                <input type="password" required id="registerPassword">
+                <label for="password">Password</label>
+                <span id="view" onclick="viewPassw()">view</span>
+            </div>
+            <input type="submit" name="" id="btn" value="Submit">
+            <div class="nohaveacc">Bạn đã có tài khoản rồi? <a href="login.html">Đăng nhập ngay</a></div>
+
+        </form>
+    </div>
+</body>
+
+<!-- jscode -->
+<script>
+    const registerPassword = document.getElementById("registerPassword");
+    const view = document.getElementById("view");
+    function viewPassw() {
+        if (registerPassword.type === "password") {
+            registerPassword.type = "text";
+            view.textContent = "hide";
+        } else {
+            registerPassword.type = "password";
+            view.textContent = "view";
+        }
+    }
+
+    let okvip = document.getElementById("btn");
+    okvip.addEventListener("click", function () {
+        okvip.style.background = "green";
+    })
+</script>
+<!-- <script src="handlelogin.js"></script> -->
+<script src="register.js"></script>
+
+</html>
